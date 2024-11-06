@@ -4,6 +4,12 @@
 
 O **Organizador de Presentes** é um aplicativo desenvolvido em Flutter que utiliza o Firebase como banco de dados para criar, ler, atualizar e excluir (CRUD) registros de presentes. O objetivo do aplicativo é permitir que os usuários registrem presentes que pretendem dar ou já deram, com uma breve descrição.
 
+Foi desenvolvido por VINICIUS FROES. Com intuito de atender os pré-requisitos levantado pela professora TASSIANA KAUTZMANN na materia Desenvolvimento em Aplicativos Moveis 
+## AVALIAÇÃO N2
+## CENTRO UNIVERSITÁRIO – CATÓLICA DE SANTA CATARINA 
+## JARAGUA DO SUL - SANTA CATARINA
+
+
 ## Funcionalidades
 
 - **Adicionar Presente:** Permite adicionar um novo presente com título, descrição e data.
