@@ -66,4 +66,5 @@ class DefaultFirebaseOptions {
     projectId: 'organizador-presentes',
     storageBucket: 'organizador-presentes.firebasestorage.app',
   );
+
 }

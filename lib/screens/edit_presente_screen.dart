@@ -12,69 +12,65 @@ class EditPresenteScreen extends StatefulWidget {
 }
 
 class _EditPresenteScreenState extends State<EditPresenteScreen> {
-  final _formKey = GlobalKey<FormState>();
-  late TextEditingController _tituloController;
-  late TextEditingController _descricaoController;
+  late TextEditingController tituloController;
+  late TextEditingController descricaoController;
+  late TextEditingController precoController;
   final FirebaseService _firebaseService = FirebaseService();
 
   @override
   void initState() {
     super.initState();
-    _tituloController = TextEditingController(text: widget.presente.titulo);
-    _descricaoController = TextEditingController(text: widget.presente.descricao);
+    tituloController = TextEditingController(text: widget.presente.titulo);
+    descricaoController = TextEditingController(text: widget.presente.descricao);
+    precoController = TextEditingController(text: widget.presente.preco.toString());
+  }
+
+  @override
+  void dispose() {
+    tituloController.dispose();
+    descricaoController.dispose();
+    precoController.dispose();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Editar Presente'),
-      ),
+      appBar: AppBar(title: Text('Editar Presente')),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Form(
-          key: _formKey,
-          child: Column(
-            children: [
-              TextFormField(
-                controller: _tituloController,
-                decoration: InputDecoration(labelText: 'Título'),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Por favor, insira um título';
-                  }
-                  return null;
-                },
-              ),
-              TextFormField(
-                controller: _descricaoController,
-                decoration: InputDecoration(labelText: 'Descrição'),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Por favor, insira uma descrição';
-                  }
-                  return null;
-                },
-              ),
-              SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    final presente = Presente(
-                      id: widget.presente.id,
-                      titulo: _tituloController.text,
-                      descricao: _descricaoController.text,
-                      data: widget.presente.data,
-                    );
-                    _firebaseService.updatePresente(presente).then((_) {
-                      Navigator.pop(context);
-                    });
-                  }
-                },
-                child: Text('Salvar'),
-              ),
-            ],
-          ),
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          children: [
+            TextField(
+              controller: tituloController,
+              decoration: InputDecoration(labelText: 'Título'),
+            ),
+            TextField(
+              controller: descricaoController,
+              decoration: InputDecoration(labelText: 'Descrição'),
+            ),
+            TextField(
+              controller: precoController,
+              decoration: InputDecoration(labelText: 'Preço'),
+              keyboardType: TextInputType.number,
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                final updatedPresente = Presente(
+                  id: widget.presente.id,
+                  titulo: tituloController.text,
+                  descricao: descricaoController.text,
+                  preco: double.parse(precoController.text),
+                  data: widget.presente.data,
+                );
+                _firebaseService.updatePresente(updatedPresente).then((_) {
+                  Navigator.pop(context);
+                });
+              },
+              child: Text('Salvar'),
+            ),
+          ],
         ),
       ),
     );

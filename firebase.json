@@ -1,1 +1,25 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"organizador-presentes","appId":"1:357553141617:android:8c2eaf5d4d29c6ea8528d0","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"organizador-presentes","configurations":{"android":"1:357553141617:android:8c2eaf5d4d29c6ea8528d0","web":"1:357553141617:web:ea5b5ca0a946720d8528d0"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "organizador-presentes",
+          "appId": "1:357553141617:android:8c2eaf5d4d29c6ea8528d0",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "organizador-presentes",
+          "configurations": {
+            "android": "1:357553141617:android:8c2eaf5d4d29c6ea8528d0",
+            "web": "1:357553141617:web:ea5b5ca0a946720d8528d0"
+          }
+        }
+      }
+    }
+  },
+  "dataconnect": {
+    "source": "dataconnect"
+  }
+}
