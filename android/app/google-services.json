@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "357553141617",
+    "project_id": "organizador-presentes",
+    "storage_bucket": "organizador-presentes.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:357553141617:android:8c2eaf5d4d29c6ea8528d0",
+        "android_client_info": {
+          "package_name": "com.example.organizador_presentes_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBACvMZ1HEQM0Op4PsZMqNKiWO84Vu9thk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
