@@ -51,11 +51,6 @@ organizador_presentes_app/
 │ │ └── presente_tile.dart
 
 
-## Configuração do Firebase
 
-1. Crie um projeto no Firebase Console.
-2. Adicione um novo aplicativo Android/iOS ao projeto Firebase.
-3. Siga as instruções para adicionar o arquivo `google-services.json` (Android) ou `GoogleService-Info.plist` (iOS) ao seu projeto Flutter.
-4. Adicione as dependências do Firebase ao seu `pubspec.yaml`:
 
 
