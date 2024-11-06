@@ -21,16 +21,27 @@ O **Organizador de Presentes** é um aplicativo desenvolvido em Flutter que util
 organizador_presentes_app/
 
 ├── lib/ 
+
 │ ├── main.dart 
+
 │ ├── models/ 
+
 │ │ └── presente.dart
+
 │ ├── screens/ 
+
 │ │ ├── home_screen.dart
+
 │ │ ├── add_presente_screen.dart
+
 │ │ ├── edit_presente_screen.dart
+
 │ ├── services/ 
+
 │ │ └── firebase_service.dart 
+
 │ ├── widgets/ 
+
 │ │ └── presente_tile.dart
 
 
